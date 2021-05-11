@@ -1,0 +1,11 @@
+name: grading workflow
+on:
+  repository_dispatch:
+    types: ["bread"]
+
+jobs:
+  use-lg:
+    runs-on: ubuntu-latest
+    steps:
+      - name: read payload
+        run: echo "success bitches"
