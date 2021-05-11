@@ -15,7 +15,6 @@ jobs:
       repository-projects: write
       security-events: write
       statuses: write
-      metadata: read
 
     steps:
       - name: checkout the repo
