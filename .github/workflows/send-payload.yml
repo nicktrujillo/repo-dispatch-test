@@ -4,7 +4,7 @@ on: workflow_dispatch
 jobs:
   send-dispatch:
     runs-on: ubuntu-latest
-    permissions: read-all|write-all
+    permissions: write-all
     steps:
       - name: checkout the repo
         uses: actions/checkout@v2
