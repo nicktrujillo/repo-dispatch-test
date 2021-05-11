@@ -29,3 +29,20 @@ worfklow2
 
 - on pull
   -step was to push
+
+**results:**
+
+CAN
+
+- tigger workflow A from workflow B if we use repo dispatch
+- must use PAT with repo scope
+
+CANNOT
+
+- use the GITHUB_TOKEN for the repo dispatch
+
+POTENTIAL LAB
+
+- Create repo scope PAT
+- Set PAT as repo secret
+- Use secret in workflow B
