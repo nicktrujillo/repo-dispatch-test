@@ -7,6 +7,7 @@ jobs:
     steps:
       - name: checkout the repo
         uses: actions/checkout@v2
-      - name: ./.github/actions/local-action
+      - name: dispatch bitches
+        uses: ./.github/actions/local-action
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
