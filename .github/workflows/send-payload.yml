@@ -4,7 +4,19 @@ on: workflow_dispatch
 jobs:
   send-dispatch:
     runs-on: ubuntu-latest
-    permissions: write-all
+    permissions:
+      actions: write
+      checks: write
+      contents: write
+      deployments: write
+      issues: write
+      packages: write
+      pull-requests: write
+      repository-projects: write
+      security-events: write
+      statuses: write
+      metadata: read
+
     steps:
       - name: checkout the repo
         uses: actions/checkout@v2
