@@ -7,8 +7,14 @@ jobs:
   use-lg:
     runs-on: ubuntu-latest
     steps:
-      - name: read payload
-                uses: githubtraining/looking-glass-action@main
+      - name: My grading action
+        uses: ./.github/actions/local-action
+        id: events
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{secrets.MY_PAT}}
+          files: "send-payload.yml"
+      - name: read payload
+        uses: githubtraining/looking-glass-action@main
+        with:
+          github-token: ${{ secrets.MY_PAT }}
           feedback: ${{ steps.events.outputs.reports }}
