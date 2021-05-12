@@ -11,4 +11,4 @@ jobs:
       - name: dispatch bitches
         uses: ./.github/actions/local-action
         with:
-          repo_token: ${{ secrets.DISPATCH_TEST_TOKEN }}
+          repo_token: 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

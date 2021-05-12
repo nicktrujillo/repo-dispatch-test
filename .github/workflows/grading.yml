@@ -8,4 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: read payload
-        run: echo "success bitches"
+                uses: githubtraining/looking-glass-action@main
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          feedback: ${{ steps.events.outputs.reports }}
